@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:obc-drone-hat-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 8268 11693 portrait
 encoding utf-8
@@ -14,63 +14,6 @@ Comment2 "Ermakov V.A."
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Switch:SW_DIP_x04 SW1
-U 1 1 5AC0CE65
-P 4250 3150
-F 0 "SW1" H 4250 3617 50  0000 C CNN
-F 1 "SW_DIP_x04" H 4250 3526 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx04_Slide_9.78x12.34mm_W7.62mm_P2.54mm" H 4250 3150 50  0001 C CNN
-F 3 "" H 4250 3150 50  0001 C CNN
-	1    4250 3150
-	1    0    0    -1  
-$EndComp
-Text GLabel 3150 2950 0    60   UnSpc ~ 0
-CFG_ID0
-Text GLabel 3150 3050 0    60   UnSpc ~ 0
-CFG_ID1
-Wire Wire Line
-	3950 2950 3450 2950
-Wire Wire Line
-	3150 3050 3550 3050
-$Comp
-L power:GND #PWR049
-U 1 1 5AC0D0C3
-P 4650 3400
-F 0 "#PWR049" H 4650 3150 50  0001 C CNN
-F 1 "GND" H 4655 3227 50  0000 C CNN
-F 2 "" H 4650 3400 50  0001 C CNN
-F 3 "" H 4650 3400 50  0001 C CNN
-	1    4650 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4550 2950 4650 2950
-Wire Wire Line
-	4650 2950 4650 3050
-Wire Wire Line
-	4550 3050 4650 3050
-Connection ~ 4650 3050
-Wire Wire Line
-	4650 3050 4650 3150
-Wire Wire Line
-	4550 3150 4650 3150
-Connection ~ 4650 3150
-Wire Wire Line
-	4650 3150 4650 3250
-Wire Wire Line
-	4550 3250 4650 3250
-Connection ~ 4650 3250
-Wire Wire Line
-	4650 3250 4650 3400
-Text GLabel 3150 3250 0    60   UnSpc ~ 0
-~HAT_ID_WE
-Wire Wire Line
-	3150 3250 3950 3250
-Text GLabel 3150 3150 0    60   UnSpc ~ 0
-CFG_ID2
-Wire Wire Line
-	3150 3150 3650 3150
 Text GLabel 3500 4250 0    60   Input ~ 0
 RPI_TX
 Text GLabel 3500 4350 0    60   Output ~ 0
@@ -83,163 +26,8 @@ Wire Wire Line
 	3550 4450 3850 4450
 Wire Wire Line
 	3550 4550 3850 4550
-Text GLabel 3250 5750 0    60   Output ~ 0
-SERVO0
-Text GLabel 3250 5850 0    60   Output ~ 0
-SERVO1
-Text GLabel 3250 5950 0    60   Output ~ 0
-SERVO2
-Text GLabel 3250 6050 0    60   Output ~ 0
-SERVO3
 $Comp
-L dronecode-conn:Servo-Conn4 XP10
-U 1 1 5AE13059
-P 3700 5900
-F 0 "XP10" H 3600 6200 60  0000 L CNN
-F 1 "SERVO" H 3600 5550 60  0000 L CNN
-F 2 "hat:SERVO4" H 3650 5900 60  0001 C CNN
-F 3 "" H 3650 5900 60  0001 C CNN
-	1    3700 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L dronecode-conn:Servo-Conn4 XP10
-U 2 1 5AE130D9
-P 4350 5900
-F 0 "XP10" H 4250 6200 60  0000 L CNN
-F 1 "SERVO" H 4477 5847 60  0001 L CNN
-F 2 "hat:SERVO4" H 4300 5900 60  0001 C CNN
-F 3 "" H 4300 5900 60  0001 C CNN
-	2    4350 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L dronecode-conn:Servo-Conn4 XP10
-U 3 1 5AE13114
-P 5000 5900
-F 0 "XP10" H 4900 6200 60  0000 L CNN
-F 1 "SERVO" H 5127 5847 60  0001 L CNN
-F 2 "hat:SERVO4" H 4950 5900 60  0001 C CNN
-F 3 "" H 4950 5900 60  0001 C CNN
-	3    5000 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3250 5750 3400 5750
-Wire Wire Line
-	3250 5850 3400 5850
-Wire Wire Line
-	3250 5950 3400 5950
-Wire Wire Line
-	3250 6050 3400 6050
-$Comp
-L power:GND #PWR053
-U 1 1 5AE14A11
-P 4600 6200
-F 0 "#PWR053" H 4600 5950 50  0001 C CNN
-F 1 "GND" H 4605 6027 50  0000 C CNN
-F 2 "" H 4600 6200 50  0001 C CNN
-F 3 "" H 4600 6200 50  0001 C CNN
-	1    4600 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR052
-U 1 1 5AE14A3F
-P 3950 5600
-F 0 "#PWR052" H 3950 5450 50  0001 C CNN
-F 1 "+5V" H 3965 5773 50  0000 C CNN
-F 2 "" H 3950 5600 50  0001 C CNN
-F 3 "" H 3950 5600 50  0001 C CNN
-	1    3950 5600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 6050 3950 6050
-Wire Wire Line
-	3950 6050 3950 5950
-Wire Wire Line
-	4050 5750 3950 5750
-Connection ~ 3950 5750
-Wire Wire Line
-	3950 5750 3950 5600
-Wire Wire Line
-	4050 5850 3950 5850
-Connection ~ 3950 5850
-Wire Wire Line
-	3950 5850 3950 5750
-Wire Wire Line
-	4050 5950 3950 5950
-Connection ~ 3950 5950
-Wire Wire Line
-	3950 5950 3950 5850
-Wire Wire Line
-	4700 5750 4600 5750
-Wire Wire Line
-	4600 5750 4600 5850
-Wire Wire Line
-	4700 5850 4600 5850
-Connection ~ 4600 5850
-Wire Wire Line
-	4600 5850 4600 5950
-Wire Wire Line
-	4700 5950 4600 5950
-Connection ~ 4600 5950
-Wire Wire Line
-	4600 5950 4600 6050
-Wire Wire Line
-	4700 6050 4600 6050
-Connection ~ 4600 6050
-Wire Wire Line
-	4600 6050 4600 6200
-$Comp
-L Connector_Generic:Conn_01x04 XP8
-U 1 1 5AE192BA
-P 5750 3050
-F 0 "XP8" H 5830 3042 50  0000 L CNN
-F 1 "CFG ID" H 5830 2951 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 5750 3050 50  0001 C CNN
-F 3 "~" H 5750 3050 50  0001 C CNN
-	1    5750 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2950 3450 2350
-Wire Wire Line
-	3450 2350 5450 2350
-Wire Wire Line
-	5450 2350 5450 2950
-Wire Wire Line
-	5450 2950 5550 2950
-Connection ~ 3450 2950
-Wire Wire Line
-	3450 2950 3150 2950
-Wire Wire Line
-	3550 3050 3550 2450
-Wire Wire Line
-	3550 2450 5350 2450
-Wire Wire Line
-	5350 2450 5350 3050
-Wire Wire Line
-	5350 3050 5550 3050
-Connection ~ 3550 3050
-Wire Wire Line
-	3550 3050 3950 3050
-Wire Wire Line
-	3650 3150 3650 2550
-Wire Wire Line
-	3650 2550 5250 2550
-Wire Wire Line
-	5250 2550 5250 3150
-Wire Wire Line
-	5250 3150 5550 3150
-Connection ~ 3650 3150
-Wire Wire Line
-	3650 3150 3950 3150
-Wire Wire Line
-	5550 3250 4650 3250
-$Comp
-L power:GND #PWR051
+L obc-drone-hat-rescue:GND-power #PWR051
 U 1 1 5AE1FA9F
 P 3750 4800
 F 0 "#PWR051" H 3750 4550 50  0001 C CNN
@@ -262,109 +50,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 4650 3750 4800
 $Comp
-L Connector_Generic:Conn_01x02 XP12
-U 1 1 5ADAC8B3
-P 3950 6800
-F 0 "XP12" H 4029 6792 50  0000 L CNN
-F 1 "PWR-5V" H 4029 6701 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 3950 6800 50  0001 C CNN
-F 3 "~" H 3950 6800 50  0001 C CNN
-	1    3950 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 XP13
-U 1 1 5ADACAD0
-P 3950 7150
-F 0 "XP13" H 4029 7142 50  0000 L CNN
-F 1 "PWR-5V" H 4029 7051 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 3950 7150 50  0001 C CNN
-F 3 "~" H 3950 7150 50  0001 C CNN
-	1    3950 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR057
-U 1 1 5ADAE6E2
-P 3650 7350
-F 0 "#PWR057" H 3650 7100 50  0001 C CNN
-F 1 "GND" H 3655 7177 50  0000 C CNN
-F 2 "" H 3650 7350 50  0001 C CNN
-F 3 "" H 3650 7350 50  0001 C CNN
-	1    3650 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR055
-U 1 1 5ADAEA7B
-P 3550 6800
-F 0 "#PWR055" H 3550 6650 50  0001 C CNN
-F 1 "+5V" H 3565 6973 50  0000 C CNN
-F 2 "" H 3550 6800 50  0001 C CNN
-F 3 "" H 3550 6800 50  0001 C CNN
-	1    3550 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 6800 3650 6800
-Wire Wire Line
-	3650 6800 3650 7150
-Wire Wire Line
-	3650 7150 3750 7150
-Connection ~ 3650 7150
-Wire Wire Line
-	3650 7150 3650 7350
-Wire Wire Line
-	3750 7250 3550 7250
-Wire Wire Line
-	3550 7250 3550 6900
-Wire Wire Line
-	3750 6900 3550 6900
-Connection ~ 3550 6900
-Wire Wire Line
-	3550 6900 3550 6800
-$Comp
-L Connector_Specialized:Screw_Terminal_01x02 XP14
-U 1 1 5ADC296E
-P 5000 7150
-F 0 "XP14" H 5080 7142 50  0000 L CNN
-F 1 "BATT" H 5080 7051 50  0000 L CNN
-F 2 "hat:XT30" H 5000 7150 50  0001 C CNN
-F 3 "~" H 5000 7150 50  0001 C CNN
-	1    5000 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR058
-U 1 1 5ADC2D33
-P 4700 7350
-F 0 "#PWR058" H 4700 7100 50  0001 C CNN
-F 1 "GND" H 4705 7177 50  0000 C CNN
-F 2 "" H 4700 7350 50  0001 C CNN
-F 3 "" H 4700 7350 50  0001 C CNN
-	1    4700 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR056
-U 1 1 5ADC2DB8
-P 4700 7050
-F 0 "#PWR056" H 4700 6900 50  0001 C CNN
-F 1 "+BATT" H 4715 7223 50  0000 C CNN
-F 2 "" H 4700 7050 50  0001 C CNN
-F 3 "" H 4700 7050 50  0001 C CNN
-	1    4700 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 7150 4700 7150
-Wire Wire Line
-	4700 7150 4700 7050
-Wire Wire Line
-	4800 7250 4700 7250
-Wire Wire Line
-	4700 7250 4700 7350
-$Comp
 L dronecode-conn:DC-GPS XP9
 U 1 1 5AE4627A
 P 4200 4400
@@ -376,7 +61,7 @@ F 3 "" H 4150 4400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5VP #PWR0101
+L obc-drone-hat-rescue:+5VP-power #PWR0101
 U 1 1 5ACF44C1
 P 3750 4050
 F 0 "#PWR0101" H 3750 3900 50  0001 C CNN
@@ -387,7 +72,7 @@ F 3 "" H 3750 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0106
+L obc-drone-hat-rescue:GND-power #PWR0106
 U 1 1 5ACF6FA9
 P 4250 5100
 F 0 "#PWR0106" H 4250 4850 50  0001 C CNN
