@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name hat)(type KiCad)(uri "$(KIPRJMOD)/hat.pretty")(options "")(descr ""))
+  (lib (name 3ds)(type KiCad)(uri "$(KIPRJMOD)/3ds")(options "")(descr ""))
+)
